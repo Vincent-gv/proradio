@@ -1,0 +1,19 @@
+/**!
+*
+* If customizer is not active
+* 
+**/
+body, html { font-family: Karla, Helvetica, Arial, sans-serif; font-weight: 400; font-style: normal; letter-spacing: 0; text-rendering: optimizeLegibility; }
+
+strong { font-family: Karla, Helvetica, Arial, sans-serif; font-weight: 700; font-style: normal; letter-spacing: -0.02em; text-rendering: optimizeLegibility; }
+
+h1, h2, h3, h4, h5, h6 { font-family: Montserrat, Helvetica, Arial, sans-serif; font-weight: 600; font-style: normal; letter-spacing: -0.04em; text-transform: none; text-rendering: geometricPrecision; }
+
+.proradio-pagecaption, .proradio-caption, .proradio-section-caption, .proradio-capfont { font-family: Montserrat, Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: -0.04em; font-style: normal; text-transform: none; text-rendering: geometricPrecision; }
+
+.proradio-caption, .proradio-section-caption, .proradio-capfont { text-transform: uppercase; }
+
+.proradio-internal-menu, label, .proradio-btn, .proradio-itemmetas, .proradio-footer__copy, .proradio-menubar, .proradio-secondaryhead, .proradio-cats, .proradio-capfont, .proradio-menu-tree, button, input[type="button"], input[type="submit"], .button, .proradio-meta, .proradio-readm, .proradio-navlink { font-family: Montserrat, Helvetica, Arial, sans-serif; font-weight: 600; font-style: normal; letter-spacing: 0.04em; text-transform: uppercase; text-rendering: geometricPrecision; }
+
+.proradio-scf { letter-spacing: 0.2em; }
+/*# sourceMappingURL=proradio-typography.css.map */
