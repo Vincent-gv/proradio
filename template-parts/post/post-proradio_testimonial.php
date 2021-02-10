@@ -4,7 +4,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 $author = get_post_meta( $post->ID, 'proradio_author', true );
 $role = get_post_meta( $post->ID, 'member_role', true );
 $classes = array( 'proradio-post','proradio-post__testimonial','proradio-darkbg proradio-negative' );

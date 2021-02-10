@@ -15,6 +15,10 @@
 
 
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 
 
@@ -39,6 +43,13 @@ if(!function_exists("proradio_custom_post_fields_settings")){
 		);
 		if(class_exists('Custom_Add_Meta_Box')){
 			$settingsbox = new Custom_Add_Meta_Box('proradio_post_special_fields', 'Design settings', $settings, 'post', true );
+		}
+
+		/**
+		 * Custom header bg
+		 */
+		if(function_exists('proradio_customtype_bg')){
+			proradio_customtype_bg('post');
 		}
 	}
 }

@@ -3,6 +3,10 @@
  * @package proradio
  * @version 1.0.0
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists('proradio_hex2rgba')){
 function proradio_hex2rgba($color, $opacity = false) {

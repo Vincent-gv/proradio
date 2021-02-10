@@ -9,6 +9,10 @@
  * Example:
  * [qt-button text="Click here" link="http" target="_blank" style="proradio-btn-primary" alignment="left|aligncenter|right" class="custom-classes"]
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 
 if(!function_exists( 'proradio_template_button' )){

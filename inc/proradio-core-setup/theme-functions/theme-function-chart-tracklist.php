@@ -7,6 +7,12 @@ Author: ProRadio
 Author URI: http://proradio.com
 */
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
+
 if(!function_exists('proradio_chart_array_orderby')){
 function proradio_chart_array_orderby(){
 
@@ -199,6 +205,12 @@ if(!function_exists('proradio_chart_tracklist')) {
 								<?php 
 
 								$link = $event['releasetrack_scurl'];
+
+								if(is_numeric($link)){
+									$link = wp_get_attachment_url( intval( $link ) );
+								} 
+
+
 								if($link!=''){
 									$regex_mp3 = "/.mp3/";
 									if ( preg_match ( $regex_mp3 , $link  ) ) {

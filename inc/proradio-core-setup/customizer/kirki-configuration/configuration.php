@@ -4,6 +4,10 @@
  * @package Kirki
  */
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 Kirki::add_config( 'proradio_config', array(
 	'capability'    => 'edit_theme_options',

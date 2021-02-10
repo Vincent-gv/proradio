@@ -6,6 +6,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 $classes = array('proradio-post' , 'proradio-post__hero ');
 $proradio_post_excerpt = get_query_var('proradio_post_excerpt', '1' );
 ?>

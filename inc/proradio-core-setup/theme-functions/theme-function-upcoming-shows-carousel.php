@@ -5,6 +5,10 @@
  * @version 1.0.0
  * 
  * */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists( 'proradio_upcoming_shows_carousel' )){
 	function proradio_upcoming_shows_carousel( $atts = array() ){
@@ -15,6 +19,7 @@ if(!function_exists( 'proradio_upcoming_shows_carousel' )){
 			// Global parameters
 			'schedulefilter' => '',
 			'quantity' => 9,
+			
 			// Carousel parameters
 			'items_per_row_desktop'	=> '3',
 			'gap'					=> '15',
@@ -83,7 +88,7 @@ if(!function_exists( 'proradio_upcoming_shows_carousel' )){
 
 		?>
 		<div id="<?php echo esc_attr($grid_id); ?>" class="<?php echo esc_attr( implode(' ', $container_classes)); ?>" data-proradio-autorefresh>
-			<div id="<?php echo esc_attr($el_id); ?>" class="proradio-owl-carousel owl-carousel owl-theme proradio-owl-theme" data-items="<?php echo esc_attr($items_per_row_desktop); ?>"data-items_tablet="<?php echo esc_attr($items_per_row_tablet); ?>"data-items_mobile="<?php echo esc_attr($items_per_row_mobile); ?>"data-items_mobile_hori="2"data-gap="<?php echo esc_attr($gap); ?>"data-pause_on_hover="<?php  echo esc_attr($pause_on_hover); ?>" data-loop="true" data-center="<?php echo esc_attr( $center ); ?>" data-stage_padding="<?php echo esc_attr($stage_padding); ?>" data-nav="<?php echo esc_attr($nav); ?>" data-dots="<?php echo esc_attr($dots); ?>" data-autoplay_timeout="<?php 	echo esc_attr($autoplay_timeout); ?>" data-amount="<?php echo esc_attr( $number ); ?>">
+			<div id="<?php echo esc_attr($el_id); ?>" class="proradio-owl-carousel owl-carousel owl-theme proradio-owl-theme" data-items="<?php echo esc_attr($items_per_row_desktop); ?>"data-items_tablet="<?php echo esc_attr($items_per_row_tablet); ?>"data-items_mobile="<?php echo esc_attr($items_per_row_mobile); ?>"data-items_mobile_hori="2"data-gap="<?php echo esc_attr($gap); ?>"data-pause_on_hover="<?php  echo esc_attr($pause_on_hover); ?>" data-loop="true" data-center="<?php echo esc_attr( $center ); ?>" data-stage_padding="<?php echo esc_attr($stage_padding); ?>" data-nav="<?php echo esc_attr($nav); ?>" data-dots="<?php echo esc_attr($dots); ?>" data-autoplay_timeout="<?php 	echo esc_attr($autoplay_timeout); ?>" data-amount="<?php echo esc_attr( $items_per_row_desktop ); ?>">
 				<?php
 				
 				$counter = 0;

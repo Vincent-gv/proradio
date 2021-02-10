@@ -2,13 +2,26 @@
 /**
  * @package WordPress
  * @subpackage proradio
- * @version 1.0.0
+ * @version 1.5.9.1
  * Theme function for custom parts:
  * caption
  *
  * Example:
  * [qt-section-caption title="My Title" size="xs|s|m|l|xl" alignment="center|left"]
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
+if(!function_exists( 'proradio_mb_str_split' )){
+	function proradio_mb_str_split( $string ) {
+	    # Split at all position not after the start: ^
+	    # and not before the end: $
+	    return preg_split('/(?<!^)(?!$)/u', $string );
+	}
+}
+
 
 
 if(!function_exists( 'proradio_template_section_caption' )){
@@ -56,6 +69,9 @@ if(!function_exists( 'proradio_template_section_caption' )){
 				<?php
 			}
 
+
+			
+
 			if( $caption ){
 				?>
 				<h2 id="<?php echo esc_attr($id); ?>" class="proradio-center proradio-capfont proradio-<?php echo esc_attr($id); ?> proradio-txtfx-<?php echo esc_attr($fx); ?>-container proradio-textfx-wrap ">
@@ -78,8 +94,13 @@ if(!function_exists( 'proradio_template_section_caption' )){
 							}
 							break;
 						case "oslo": 
+
+
 							$length = strlen($caption);
-							$splitted = str_split($caption, 1);
+							$splitted = proradio_mb_str_split($caption, 1);
+
+
+
 							$style = '
 							.proradio-'.$id.' .proradio-txtfx--oslo, .proradio-'.$id.' .proradio-'.$id.' .proradio-txtfx--oslo::before { color: '.esc_attr($color1).'}
 							.proradio-'.$id.' .proradio-txtfx--oslo.proradio-active span  { color: '.esc_attr($color2).'}

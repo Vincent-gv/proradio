@@ -4,7 +4,9 @@
  * @subpackage proradio
  * @version 1.0.0
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if ( is_shop() || is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ){
 	$layout = get_theme_mod( 'proradio_woocommerce_design', 'fullpage' );

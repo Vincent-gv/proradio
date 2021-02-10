@@ -9,6 +9,10 @@
  * Example:
  * [qt-category-grid label="Posts|whatever" hide_empty="0|1" include="all|''|1,2,3" exclude="false|1,2,3" exclude="''|1,2,3" parent="1|0" child_of="false|1,2,3"]
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists( 'proradio_template_category_grid' )){
 	function proradio_template_category_grid( $atts = array() ){

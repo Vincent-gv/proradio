@@ -11,4 +11,7 @@
  * This template is only to be used to create the popup window
  * ============================================================
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_template_part( 'template-parts/popup/popup');

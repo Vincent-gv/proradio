@@ -4,6 +4,10 @@
  * @subpackage proradio
  * @version 1.1.8
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 /* Add theme body class
 =============================================*/

@@ -7,7 +7,10 @@
  * @subpackage proradio
  * @version 1.1.5
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 $classes = array('proradio-post','proradio-paper', 'proradio-post__ver');
 if( has_post_thumbnail( ) ){
 	$classes[] = 'proradio-has-thumb';

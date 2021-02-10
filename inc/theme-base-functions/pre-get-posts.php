@@ -4,6 +4,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 /**
  * ======================================================
@@ -12,11 +16,6 @@
  * Customize number of posts depending on the archive post type
  * ======================================================
  */
-
-
-
-
-
 if(!function_exists('proradio_custom_number_of_posts')){
 function proradio_custom_number_of_posts( $query ) {
 	if($query->is_main_query() && !is_admin()){

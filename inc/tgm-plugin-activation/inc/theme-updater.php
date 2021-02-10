@@ -249,15 +249,17 @@ if(!function_exists('proradio_theme_update_form_output')){
 		==============================*/
 		$theme_updated_success = false;
 		if( $next_due_date &&  isset($_POST) ){
-			if(  wp_verify_nonce( $_POST['proradio_theme_update_field'], 'proradio_theme_update_action' ) ){
-				if( isset( $_POST['proradio-confirm-update'] ) && isset( $_GET['themeupdate'] ) ){
-					?>
-					<div class="proradio-welcome__updater-debug">
-						<?php $theme_updated_success = proradio_theme_update_function( $stored_activation_key, $next_due_date ); ?>
-					</div>
-					<?php
-				}
-			} 
+			if(array_key_exists('proradio_theme_update_field', $_POST)){
+				if(  wp_verify_nonce( $_POST['proradio_theme_update_field'], 'proradio_theme_update_action' ) ){
+					if( isset( $_POST['proradio-confirm-update'] ) && isset( $_GET['themeupdate'] ) ){
+						?>
+						<div class="proradio-welcome__updater-debug">
+							<?php $theme_updated_success = proradio_theme_update_function( $stored_activation_key, $next_due_date ); ?>
+						</div>
+						<?php
+					}
+				} 
+			}
 		}
 		if( true === $theme_updated_success ){
 			$urladmin = admin_url( 'themes.php?page=proradio-tgmpa-install-plugins' );

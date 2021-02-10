@@ -4,7 +4,9 @@
  * @subpackage proradio
  * @version 1.0.0
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_header(); 
 ?>
 <div id="proradio-pagecontent" class="proradio-pagecontent proradio-single proradio-single--radiochannel proradio-single__sidebar">
@@ -26,7 +28,7 @@ get_header();
 		<div class="proradio-maincontent proradio-bg">
 			<div class="proradio- proradio-paper">
 				<div class="proradio-container">
-					<div class="proradio-entrycontent <?php echo (!$display_box)? 'proradio-section' : ''; ?> proradio-section">
+					<div class="proradio-entrycontent <?php if(isset($display_box)){ echo (!$display_box)? 'proradio-section' : ''; } ?> proradio-section">
 						<?php  
 
 						/**

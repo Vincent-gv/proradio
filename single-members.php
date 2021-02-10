@@ -4,7 +4,9 @@
  * @subpackage proradio
  * @version 1.4.5
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_header(); 
 ?>
 <div id="proradio-pagecontent" class="proradio-pagecontent proradio-single proradio-single__nosidebar">
@@ -66,7 +68,7 @@ get_header();
 		/**
 		 * Related
 		 */
-		if( get_theme_mod( 'related_member' )){
+		if( get_theme_mod( 'related_members' )){
 			get_template_part( 'template-parts/single/part-related-members' ); 
 		}
 		?>

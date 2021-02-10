@@ -5,6 +5,10 @@
  * @version 1.5.3
  * Mini widget to display current radio show from the database
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists('proradio_onair')) {
 	function proradio_onair($atts){

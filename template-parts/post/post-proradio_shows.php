@@ -6,7 +6,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 global $post;
 
 /**
@@ -95,7 +98,7 @@ $classes = array( 'proradio-post','proradio-post__card','proradio-post__card--sh
 		 * @since  20200904
 		 * Current show label
 		 */
-		if( $current_show ){
+		if( isset($current_show) && false !== $current_show ){
 			?>
 			<h5 class="proradio-element-caption proradio-caption proradio-caption--neg proradio-caption__s center proradio-center proradio-caption__c" data-qtwaypoints-offset="30" data-qtwaypoints=""><span><?php esc_html_e( 'Now playing', 'proradio' ) ?></span>
 				</h5><?php

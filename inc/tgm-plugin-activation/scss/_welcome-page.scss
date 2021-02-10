@@ -72,6 +72,9 @@ opacity: 1;
 		height: 100%;
 		padding: 20px 30px 5px 10px;
 		vertical-align: middle;
+		a {
+			text-decoration: none;
+		}
 
 	}
 	&__updater-debug {
@@ -114,7 +117,7 @@ opacity: 1;
 		@extend .#{$theme-prefix}fadeInUp-slow;
 		transition-delay: 2.1s;
 		img {
-			max-width: 240px;
+			max-width: 120px;
 			height: auto;
 		}
 	}
@@ -310,4 +313,37 @@ opacity: 1;
 			}
 		}
 	}
+
+	&__search {
+		padding: 16px 0;
+		input[type="text"]{
+			width: 300px;
+		}
+	}
+
+	// Knowledgebase
+	.proradio-kb {
+		
+		a {
+			text-decoration: none;
+			font-size: 16px;
+			padding-bottom: 16px;
+			display: block;
+			i {
+				color: #898989;
+				font-size: 35px;
+				display: inline-block;
+				float: left;
+				margin-right: 18px;
+			}
+			p {
+				font-size: 13px;
+				color: #999;
+				margin: 0;
+			}
+		}
+	}
 }
+
+
+

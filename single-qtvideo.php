@@ -6,7 +6,9 @@
  * changelog
  * 1.4.3 Added sidebar 
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_header(); 
 
 // Customizer sidebar settings

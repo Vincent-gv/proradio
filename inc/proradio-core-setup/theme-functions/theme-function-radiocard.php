@@ -3,6 +3,10 @@
 Package: proradio
 Create a card with a
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists('proradio_radiocard_shortcode')){
 	function proradio_radiocard_shortcode ($atts){

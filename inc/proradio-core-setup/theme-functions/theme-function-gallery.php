@@ -2,6 +2,14 @@
 /*
 Package: proradio
 */
+
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
+
+
 if (!function_exists('proradio_short_gallery')){
 function proradio_short_gallery($atts){
 	extract( shortcode_atts( array(

@@ -4,6 +4,10 @@
  * @subpackage proradio
  * @version 1.0.0
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 // Design override
 $hide = get_post_meta($post->ID, 'proradio_page_header_hide', true); // see custom-types/page/page.php

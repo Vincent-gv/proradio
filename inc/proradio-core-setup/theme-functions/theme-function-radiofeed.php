@@ -11,6 +11,10 @@
  * 
  * 
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 
 if(!function_exists('proradio_short_radiofeed')){

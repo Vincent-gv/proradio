@@ -5,6 +5,10 @@
  * Output a json version of the schedule json
  * ===================================================================
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists('proradio_extract_schedule_days_rest')){
 	function proradio_extract_schedule_days_rest( $data ){

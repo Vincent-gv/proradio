@@ -7,7 +7,9 @@
  * ONAIR2 COMPATIBILITY:
  * This template is a retrocompatibility file for OnAir2 legacy websites.
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_header(); 
 ?>
 <div id="proradio-pagecontent" class="proradio-pagecontent proradio-single proradio-single__fullwidth">

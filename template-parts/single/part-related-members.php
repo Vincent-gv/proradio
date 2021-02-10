@@ -32,37 +32,6 @@ $argsList = array(
 );
 
 
-/**
- *
- *  Check if we have a taxonomy result and add to query
- *  
- */
-$add_more = false;
-if($related_posttype == 'event'){
-	if(get_theme_mod( 'events_hideold')=='1'){
-		$add_more = true;
-	}
-}
-$terms = get_the_terms( get_the_id()  , $related_taxonomy, 'string');
-$term_ids = false;
-if( true == $add_more && !is_wp_error( $terms ) ) {
-	if(is_array($terms)) {
-		$term_ids = wp_list_pluck($terms,'term_id');
-		if ($term_ids) {
-			$argsList['tax_query'] =  array(
-				array(
-					'taxonomy' => $related_taxonomy,
-					'field' => 'id',
-					'terms' => $term_ids,
-					'operator'=> 'IN'
-				)
-			);
-		}
-	}
-}
-
-
-
 
 
 /**

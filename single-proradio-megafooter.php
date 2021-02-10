@@ -9,7 +9,9 @@
  * This template is meant for pure preview use.
  * ============================================================
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>

@@ -8,6 +8,9 @@
  * return early without loading the comments.
  *  
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if ( post_password_required() )
 	return;

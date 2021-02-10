@@ -10,6 +10,10 @@
  * Due to the serialized nature of the data for this shortcode, 
  * is not possible to use it out of page builder
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists('proradio_pricingtable')){
 	function proradio_pricingtable ($atts){

@@ -5,6 +5,9 @@
  * @version 1.0.0
  * Template Name: Blog No Sidebar
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_header();
 $paged = proradio_get_paged();
 

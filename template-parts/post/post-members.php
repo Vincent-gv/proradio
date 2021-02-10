@@ -4,7 +4,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 $post_metas = get_post_meta( $post->ID );
 $classes = array( 'proradio-post','proradio-post__card','proradio-post__card--members','proradio-darkbg','proradio-negative' );
 ?>

@@ -1,4 +1,4 @@
-<div class=""></div><?php
+<?php
 /**
  * 
  *
@@ -6,7 +6,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 global $post;
 $classes = array( 'proradio-post','proradio-post__card','proradio-post__card--video','proradio-darkbg proradio-negative' );
 ?>

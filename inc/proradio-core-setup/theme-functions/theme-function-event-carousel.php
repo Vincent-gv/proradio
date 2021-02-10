@@ -6,7 +6,10 @@ Version: 1.9.9
 Author: ProRadio
 Author URI: http://proradio.com
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 /**
  * ====================================================================================

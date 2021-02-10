@@ -6,7 +6,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 global $post;
 $post_id = $post->ID;
 $classes = array( 'proradio-post proradio-post__card proradio-post__card--radio','proradio-darkbg proradio-negative' )

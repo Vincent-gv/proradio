@@ -6,7 +6,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 $classes = array( 'proradio-post proradio-post__card','proradio-darkbg proradio-negative' );
 $print_date = date_i18n( get_option( 'date_format' ), strtotime(get_post_meta( $post->ID,  '_podcast_date',true )) );
 ?>

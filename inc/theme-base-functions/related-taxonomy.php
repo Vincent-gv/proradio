@@ -5,6 +5,12 @@
  * @version 1.0.0
 */
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
+
 /* Gets the taxonomy associated with any post type for other queries
 =============================================*/
 if(!function_exists('proradio_get_type_taxonomy')){

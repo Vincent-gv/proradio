@@ -9,6 +9,10 @@
  * Example:
  * [qt-featured-author id="0"]
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 
 if(!function_exists( 'proradio_template_featured_author' )){

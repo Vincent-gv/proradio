@@ -1,4 +1,8 @@
 <?php
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if(!function_exists('proradio_chart_register_type')){
 	add_action('init', 'proradio_chart_register_type');  
 	function proradio_chart_register_type() {
@@ -119,8 +123,6 @@ if(!function_exists('proradio_chart_register_type')){
 		);
 
 
-
-
 		/**
 		 * If the Chart Vote plugin is active, a new field will be added to control the voting
 		 */
@@ -134,6 +136,14 @@ if(!function_exists('proradio_chart_register_type')){
 		}
 		if(class_exists("Custom_Add_Meta_Box")){
 			$tracks_box = new Custom_Add_Meta_Box( 'chart_tracks', esc_html__('Chart Tracks','proradio'), $fields_chart, 'chart', true );
+		}
+
+
+		/**
+		 * Custom header bg
+		 */
+		if(function_exists('proradio_customtype_bg')){
+			proradio_customtype_bg('chart');
 		}
 
 	}

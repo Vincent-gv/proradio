@@ -10,6 +10,10 @@
  * [qt-authors-grid number="6" orderby="post_count|nicename|registered"]
 */
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists( 'proradio_template_authors_small' )){
 	function proradio_template_authors_small( $atts = array() ){

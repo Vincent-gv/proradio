@@ -5,6 +5,10 @@
  * @version 1.0.0
  * Search
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if ( false !== get_theme_mod( 'proradio_search_header', false ) ) {
 	?>

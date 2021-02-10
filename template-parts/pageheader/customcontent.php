@@ -6,6 +6,10 @@
  * Display the page editor content in the first page of archives
 */
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 /**
  *

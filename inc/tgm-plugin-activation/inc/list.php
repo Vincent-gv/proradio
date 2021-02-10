@@ -40,7 +40,13 @@ function proradio_get_pluginslist( $url ){
 		
 			$plugins_json = proradio_parse_plugins_update( $theme_version , $stored_optionname, $url );
 			$plugins_data = json_decode( $plugins_json, true );
-			$plugins_list = json_decode( $plugins_data['plugins_list_json'], true );
+			if(is_array($plugins_data)){
+				if(array_key_exists('plugins_list_json',$plugins_data)){
+					$plugins_list = json_decode( $plugins_data['plugins_list_json'], true );
+				} else {
+					$plugins_list = [];
+				}
+			}
 
 		} else {
 			$required_update = false; // if set to true, will parse a new data
@@ -63,7 +69,7 @@ function proradio_get_pluginslist( $url ){
 			}
 		}
 	
-		if( $plugins_list ) {
+		if( isset( $plugins_list ) ) {
 			return $plugins_list;
 		} else {
 			return array();

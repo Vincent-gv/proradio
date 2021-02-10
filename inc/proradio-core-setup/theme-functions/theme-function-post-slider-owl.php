@@ -6,6 +6,10 @@
  *
 */
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists( 'proradio_posts_slider_owl' )){
 	function proradio_posts_slider_owl( $atts = array() ){

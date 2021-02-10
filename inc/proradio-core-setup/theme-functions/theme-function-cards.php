@@ -7,6 +7,10 @@
  * Mini link cards
  * Icons requires the Icons2Go plugin
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists('proradio_cards')){
 	function proradio_cards ($atts){

@@ -4,6 +4,10 @@
  * @subpackage proradio
  * @version 1.0.0
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 /**
  * ======================================================
@@ -58,11 +62,21 @@ if ( is_tax() || is_category() ){
  * Otherwise, check for the featured image in case of an archive page
  * ======================================================
  */
-if( is_page() || is_single() ){
+if( is_page() || is_single() || is_singular() ){
 	$id = get_the_ID();
 	if ( has_post_thumbnail( $id ) ){
 		$image_id = get_post_thumbnail_id( $id );
 		$header_image = wp_get_attachment_image_src( $image_id, 'full' );
+	}
+
+	/**
+	 * [$qt_customheader_bg new alternative image for header]
+	 * @var [ID]
+	 * @since  1.6.0
+	 */
+	$qt_customheader_bg = get_post_meta(  $id, "qt_customheader_bg", true );
+	if($qt_customheader_bg){
+		$header_image = wp_get_attachment_image_src($qt_customheader_bg,'full');
 	}
 }
 

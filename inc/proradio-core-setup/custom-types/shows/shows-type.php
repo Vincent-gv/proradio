@@ -38,7 +38,6 @@ if(!function_exists( 'proradio_shows_register_type' )){
 			'show_in_admin_bar' => true,
 			'show_in_menu' => true,
 			'rewrite'  => array( 'slug' => sanitize_title_with_dashes( get_theme_mod('slug_shows', 'shows') ) ),
-			'show_in_rest' => true,
 			'menu_icon' =>  'dashicons-pressthis',
 			'supports' => array('title', 'thumbnail','editor', 'excerpt', 'revisions', 'page-attributes'   ),
 			'show_in_rest' 				=> true,
@@ -80,18 +79,19 @@ if(!function_exists( 'proradio_shows_register_type' )){
 		if(function_exists('proradio_core_custom_taxonomy')){
 			proradio_core_custom_taxonomy('genre','shows',$args	);
 		} 
-	}
-}
 
-/*
-*
-*	Meta boxes ===========================================================================
-*
-*	======================================================================================
-*/
-if(!function_exists( 'proradio_shows_capabilities' )){
-	add_action('wp_loaded', 'proradio_shows_capabilities');  
-	function proradio_shows_capabilities(){
+
+		/**
+		 * Custom header bg
+		 */
+		if(function_exists('proradio_customtype_bg')){
+			proradio_customtype_bg('shows');
+		}
+
+		
+		/**
+		 * Custom fields		 
+		 */
 		$fields = array(
 			array(
 				'label' =>  esc_html__('Subtitle',"proradio"),
@@ -111,6 +111,20 @@ if(!function_exists( 'proradio_shows_capabilities' )){
 				'description' => esc_html__('Plain text displayed in the schedule',"proradio"),
 				'id'    => 'show_incipit',
 				'type'  => 'textarea'
+				)
+		    
+		    , array(
+				'label' => esc_html__('Display timetable in single show page',"proradio"),
+				'description' => esc_html__('List all times the show airs',"proradio"),
+				'id'    => 'show_timetable',
+				'type' 	=> 'select',
+				'default_label' => 'Show',
+				'options' => array (	
+						array(
+							'label' => esc_attr__( 'Hide', "proradio" ), 
+							'value' => 'hide' 
+						),	
+					)
 				)
 		    , array(
 				'label' => esc_html__('Podcast archive',"proradio"),
@@ -224,5 +238,7 @@ if(!function_exists( 'proradio_shows_capabilities' )){
 		if(class_exists("Custom_Add_Meta_Box")){
 			$proradio_showsocials = new Custom_Add_Meta_Box( 'proradio_showsocials', esc_html__('Social network pages', "proradio"), $fields2, 'shows', true );
 		}
+
+		
 	}
 }

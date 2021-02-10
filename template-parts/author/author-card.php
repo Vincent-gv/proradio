@@ -7,6 +7,10 @@
  * @version 1.0.0
 */ 
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 /**
  * @var $proradio_featuredauthor_id [id of the wp author, can be passed using set_query_var]

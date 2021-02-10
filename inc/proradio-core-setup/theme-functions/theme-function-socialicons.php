@@ -9,6 +9,10 @@
  * Example:
  * [qt-socialicons text="" link="" icon="" style="" alignment="" class=""]
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 
 if(!function_exists('proradio_template_socialicons_shortcode')){

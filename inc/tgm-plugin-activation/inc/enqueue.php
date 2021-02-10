@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 =============================================*/
 if(!function_exists('proradio_tgm_admin_files_inclusion')){
 function proradio_tgm_admin_files_inclusion() {
-	wp_enqueue_style( 'proradio-tgm-admin', get_theme_file_uri('/inc/tgm-plugin-activation/css/proradio-tgm-admin.css' ), false, '1.0.0' );
+	wp_enqueue_style( 'proradio-tgm-admin', get_theme_file_uri('/inc/tgm-plugin-activation/css/proradio-tgm-admin.css' ), false, '1.0.2' );
+	// wp_enqueue_style( 'proradio-for-elementor-icons', get_theme_file_uri('/inc/tgm-plugin-activation/css/proradio-for-elementor/styles.css' ), false, '1.0.0' );
 }}
 add_action( 'admin_enqueue_scripts', 'proradio_tgm_admin_files_inclusion', 999999 );

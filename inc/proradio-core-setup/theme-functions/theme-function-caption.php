@@ -10,6 +10,10 @@
  * [qt-caption title="My Title" size="xs|s|m|l|xl" alignment="center|left"]
 */
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 
 

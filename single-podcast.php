@@ -4,7 +4,9 @@
  * @subpackage proradio
  * @version 1.0.0
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_header(); 
 ?>
 <div id="proradio-pagecontent" class="proradio-pagecontent proradio-single proradio-single--podcast">
@@ -25,7 +27,20 @@ get_header();
 						<?php 
 
 						//======================= PLAYER ======================
-						$link = esc_url( get_post_meta( $post->ID, '_podcast_resourceurl' ,true ) );
+						$link = false;//esc_url( get_post_meta( $post->ID, '_podcast_resourceurl' ,true ) );
+
+						$_podcast_resourceurl = get_post_meta( intval($post->ID), '_podcast_resourceurl' ,true );
+						if(is_numeric($_podcast_resourceurl)){
+							$_podcast_resourceurl = wp_get_attachment_url( intval( $_podcast_resourceurl ) );
+						} 
+						
+						if( $_podcast_resourceurl ){
+							$_podcast_resourceurl = esc_url($_podcast_resourceurl );
+							$link = $_podcast_resourceurl;
+						}
+
+
+
 						// Find the classic Enclosure field
 						if($link == ''){
 							$link = get_post_meta( $post->ID, 'enclosure' ,true ) ;

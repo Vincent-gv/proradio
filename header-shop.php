@@ -4,7 +4,9 @@
  * @subpackage proradio
  * @version 1.0.0
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_header();
 $classes = array('proradio-pagecontent', 'proradio-master__woocommerce');
 if ( is_shop() || is_tax( 'product_cat' )  || is_tax( 'product_tag' ) ){

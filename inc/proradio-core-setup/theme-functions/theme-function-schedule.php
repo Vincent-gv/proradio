@@ -6,6 +6,10 @@
  * Theme function for custom parts:
  * display the full radio schedule
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+  die( '-1' );
+}
 
 if(!function_exists('proradio_showgrid')) {
 	function proradio_showgrid($atts){

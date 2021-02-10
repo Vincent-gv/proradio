@@ -4,6 +4,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists('proradio_schedule_register_type')){
 	add_action('init', 'proradio_schedule_register_type');  
@@ -163,7 +167,19 @@ if(!function_exists('proradio_schedule_register_type')){
 		if (class_exists('Custom_Add_Meta_Box')) {
 			$sample_box = new Custom_Add_Meta_Box( 'schedule_shows', esc_html__('Schedule shows','proradio'), $fields, 'schedule', true );
 		}
+
+		/**
+		 * Custom header bg
+		 */
+		if(function_exists('proradio_customtype_bg')){
+			proradio_customtype_bg('schedule');
+		}
+
+
 	}
+
+
+
 
 
 

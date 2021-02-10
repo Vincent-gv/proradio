@@ -4,8 +4,11 @@
  * @subpackage proradio
  * @version 1.0.0
  */
-?>
-<?php
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
 /**
  * ==================================
  * classic pagination numbers

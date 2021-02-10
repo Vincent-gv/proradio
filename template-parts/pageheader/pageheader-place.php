@@ -4,6 +4,10 @@
  * @subpackage proradio
  * @version 1.0.0
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 $format = get_post_format( $post->ID );
 if(!$format) {

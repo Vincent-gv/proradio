@@ -7,7 +7,10 @@
  *
  * Template part for displaying posts with horizontal design for desktop
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 $classes = array('proradio-post','proradio-paper', 'proradio-post__hor');
 if( has_post_thumbnail( ) ){
 	$classes[] = 'proradio-has-thumb';

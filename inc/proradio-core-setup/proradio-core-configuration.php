@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 if(function_exists('proradio_core_active') ){
+	require_once get_theme_file_path( '/inc/proradio-core-setup/custom-types/utils/header_background.php' );
 	require_once get_theme_file_path( '/inc/proradio-core-setup/custom-types/post/post.php' );
 	require_once get_theme_file_path( '/inc/proradio-core-setup/custom-types/page/page.php' );
 	require_once get_theme_file_path( '/inc/proradio-core-setup/custom-types/radio/radio-type.php' );
@@ -39,27 +40,28 @@ if(function_exists('proradio_core_active') ){
 
 	/* Customizer */
 	if ( class_exists( 'Kirki' ) ) {
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/advanced_settings.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/buttons_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/captions_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/charts_settings.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/colors_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/cta_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/events_settings.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/footer_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/header_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/layout_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/pageheader_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/related_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/secondary_header_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/social_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/typo_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/woocommerce_section.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/schedule_settings.php' );
-		require_once   get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/configuration.php' ); 
+
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/advanced_settings.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/buttons_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/captions_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/charts_settings.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/colors_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/cta_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/events_settings.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/footer_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/header_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/layout_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/pageheader_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/related_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/secondary_header_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/social_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/typo_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/woocommerce_section.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/sections/schedule_settings.php' );
+		require_once get_theme_file_path( '/inc/proradio-core-setup/customizer/kirki-configuration/configuration.php' ); 
 	}
 
 }
 
-require_once   get_theme_file_path( '/inc/proradio-core-setup/theme-functions/theme-functions.php' ); 
+require_once get_theme_file_path( '/inc/proradio-core-setup/theme-functions/theme-functions.php' ); 

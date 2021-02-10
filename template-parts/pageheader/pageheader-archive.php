@@ -4,6 +4,11 @@
  * @subpackage proradio
  * @version 1.0.0
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
 // Design override
 $hide = 0;
 $paged = proradio_get_paged();

@@ -5,6 +5,11 @@
  * @version 1.0.0
  */
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header(); 
 ?>
 <div id="proradio-pagecontent" class="proradio-pagecontent proradio-single proradio-single__nosidebar">

@@ -1622,7 +1622,7 @@
 							y: centerY
 						};
 						win.on('proradioMouseMoved.proradio3d', function(){
-							if( v.fps > 8 ){
+							// if( v.fps > 8 ){
 								$(v.moverMouse).clearQueue();
 								$(v.moverMouse).animate({
 								  x: v.mousePos.x ,
@@ -1642,7 +1642,7 @@
 										$('.proradio-animating-3d .proradio-3dheader__bg--2').css({"transform": "translate(" + mouseXrel  *  2 + "px, " + mouseYrel *  2 + "px)", "transition" : 'none'});
 								  	}
 								});
-							}
+							// }
 						});
 					}
 				},
@@ -1750,7 +1750,7 @@
 				if( f.isSafari() ){
 					$('body').addClass('isSafari');
 				}
-				f.countFps(f);
+				// f.countFps(f);
 				$('html').removeClass('no-js');
 				f.treeMenu();
 				f.stickyBarLinkPrep();

@@ -4,6 +4,9 @@
  * @subpackage proradio
  * @version 1.0.0
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 ?>
 <div  class="proradio-searchform">
 	<form action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" class="proradio-form-wrapper">

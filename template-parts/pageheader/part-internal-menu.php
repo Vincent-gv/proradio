@@ -7,6 +7,10 @@
 * @version 1.0.0
 */
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 $links = get_post_meta($post->ID, 'proradio_internalmenu_items', true);
 if( is_array( $links )){

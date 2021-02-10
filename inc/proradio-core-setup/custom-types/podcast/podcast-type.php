@@ -1,7 +1,11 @@
 <?php
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-add_action('init', 'proradio_podcast_register_type');  
 if(!function_exists('proradio_podcast_register_type')){
+	add_action('init', 'proradio_podcast_register_type');  
 function proradio_podcast_register_type() {
 	$labelspodcast = array(
 		'name' 					=> esc_html__("Podcast","proradio"),
@@ -73,35 +77,44 @@ function proradio_podcast_register_type() {
 	if(function_exists('proradio_core_custom_taxonomy')){
 		proradio_core_custom_taxonomy('podcastfilter','podcast', $args );
 	}
+
+
+	/**
+	 * Custom header bg
+	 */
+	if(function_exists('proradio_customtype_bg')){
+		proradio_customtype_bg('podcast');
+	}
+
+
+
+	$podcast_tab_custom = array(
+		array(
+			'label' => esc_html__( 'Artist Name', "proradio" ),
+			'id'    => '_podcast_artist',
+			'type'  => 'text'
+		),
+		array(
+			'label' => esc_html__( 'Date', "proradio" ),
+			'id'    => '_podcast_date',
+			'type'  => 'date'
+		),
+		'_podcast_resourceurl' => array(
+			'label' => esc_html__( 'Mixcloud, Soundcloud, Spotify or MP3 url.', "proradio" ),
+			'desc'	=> esc_html__( 'Check the manual for the correct URL of external services.','kentha' ), // description
+			'id' 	=> '_podcast_resourceurl',
+			'type' 	=> 'file',
+		),
+		'enclosure' => array(
+			'label' => esc_html__( 'Enclosure', "proradio" ),
+			'desc'	=> esc_html__( 'Specify the URL for your podcast RSS field. You can copy here the MP3 url','kentha' ), // description
+			'id' 	=> 'enclosure',
+			'type' 	=> 'text',
+		),
+	);
+
+
+	if (class_exists('Custom_Add_Meta_Box')){
+		$podcast_tab_custom_box = new Custom_Add_Meta_Box( 'podcast_customtab', esc_html__('Podcast details', "proradio"), $podcast_tab_custom, 'podcast', true );
+	}
 }}
-
-
-$podcast_tab_custom = array(
-	array(
-		'label' => esc_html__( 'Artist Name', "proradio" ),
-		'id'    => '_podcast_artist',
-		'type'  => 'text'
-	),
-	array(
-		'label' => esc_html__( 'Date', "proradio" ),
-		'id'    => '_podcast_date',
-		'type'  => 'date'
-	),
-	'_podcast_resourceurl' => array(
-		'label' => esc_html__( 'Mixcloud, Soundcloud, Spotify or MP3 url.', "proradio" ),
-		'desc'	=> esc_html__( 'Check the manual for the correct URL of external services.','kentha' ), // description
-		'id' => '_podcast_resourceurl',
-		'type' => 'file',
-	),
-	'enclosure' => array(
-		'label' => esc_html__( 'Enclosure', "proradio" ),
-		'desc'	=> esc_html__( 'Specify the URL for your podcast RSS field. You can copy here the MP3 url','kentha' ), // description
-		'id' => 'enclosure',
-		'type' => 'text',
-	),
-);
-
-
-if (class_exists('Custom_Add_Meta_Box')){
-	$podcast_tab_custom_box = new Custom_Add_Meta_Box( 'podcast_customtab', esc_html__('Podcast details', "proradio"), $podcast_tab_custom, 'podcast', true );
-}

@@ -8,7 +8,9 @@
  * Load a different template depending on the current page type.
  * For WooCommerce load a specific template, otherwise load default teplate.
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 /**
  * ==========================================

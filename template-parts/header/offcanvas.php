@@ -5,6 +5,11 @@
  * @version 1.0.0
  * Off canvas
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
 ?>
 <nav id="proradio-overlay" class="proradio-overlay proradio-paper">
 	<div class="proradio-overlay__closebar"><span class="proradio-btn proradio-btn__r"  data-proradio-switch="proradio-overlayopen" data-proradio-target="#proradio-body"> <i class="material-icons">close</i></span></div>

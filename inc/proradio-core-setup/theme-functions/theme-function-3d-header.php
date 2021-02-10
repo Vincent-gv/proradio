@@ -7,6 +7,13 @@
  * caption
  *
 */
+
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
+
 if(!function_exists( 'proradio_mbStringToArray' )){
 function proradio_mbStringToArray ($string) {
    	mb_regex_encoding('UTF-8');

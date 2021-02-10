@@ -28,7 +28,20 @@ switch( $posttype ){
 	case 'podcast':
 
 		$regex_mp3 = "/.mp3/";
-		$_podcast_resourceurl = esc_url( get_post_meta( $post->ID, '_podcast_resourceurl' ,true ) );
+		
+		
+		$_podcast_resourceurl = get_post_meta( intval($post->ID), '_podcast_resourceurl' ,true );
+		if(is_numeric($_podcast_resourceurl)){
+			$_podcast_resourceurl = wp_get_attachment_url( intval( $_podcast_resourceurl ) );
+		} 
+		
+		if( $_podcast_resourceurl ){
+			$_podcast_resourceurl = esc_url($_podcast_resourceurl );
+			$link = $_podcast_resourceurl;
+		}
+
+
+
 		// SINCE 2020 03 26
 		// powerpress compatibility
 		// Find any field called enclosure something

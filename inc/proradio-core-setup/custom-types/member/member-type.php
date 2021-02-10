@@ -4,14 +4,12 @@
  * @subpackage proradio
  * @version 1.0.0
  */
-
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if(!function_exists('members_register_type')){
-
-
-
-
 	add_action('init', 'members_register_type');  
-
 	function members_register_type() {
 
 		/**
@@ -188,6 +186,13 @@ if(!function_exists('members_register_type')){
 		);
 		if(class_exists('Custom_Add_Meta_Box')) {
 			$members_meta_box = new Custom_Add_Meta_Box( 'memberss_customtab',  esc_html__('Member details', "proradio"), $fields, 'members', true );
+		}
+
+		/**
+		 * Custom header bg
+		 */
+		if(function_exists('proradio_customtype_bg')){
+			proradio_customtype_bg('members');
 		}
 	}
 }

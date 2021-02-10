@@ -3,6 +3,10 @@
  * Create sections using the WordPress Customizer API.
  * @package Kirki
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 
 

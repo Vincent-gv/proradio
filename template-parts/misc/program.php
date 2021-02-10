@@ -7,6 +7,11 @@
  * Display a program for multi schedules
  * 
 */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
 $program = proradio_program_display( $post->ID , false); // no output
 if( $program && $program !== ''){
 	?>

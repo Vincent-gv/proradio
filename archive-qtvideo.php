@@ -6,7 +6,9 @@
  * Template Name: Archive videos
 */
 
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 get_header(); 
 $paged = proradio_get_paged();

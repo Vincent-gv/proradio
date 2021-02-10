@@ -4,7 +4,9 @@
  * @subpackage proradio
  * @version 1.0.0
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_header(); 
 ?>
 <div id="proradio-pagecontent" class="proradio-pagecontent proradio-single proradio-single__nosidebar proradio-paper">

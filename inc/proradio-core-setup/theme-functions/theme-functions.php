@@ -6,9 +6,16 @@
  *
  * Set the environment for external plugins
  */
-// if(function_exists('proradio_core_active')){
 
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
+
+
+if(function_exists('proradio_core_active')){
 
 	// Helpers
 	require_once get_theme_file_path( '/inc/proradio-core-setup/theme-functions/helpers/get-terms-array.php' );
@@ -60,3 +67,4 @@
 	if(function_exists('qtplaces_main_shortcode')){
 		require_once get_theme_file_path( '/inc/proradio-core-setup/theme-functions/theme-function-places-grid.php' );
 	}
+}

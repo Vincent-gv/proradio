@@ -17,6 +17,10 @@
  *	Design settings for single page
  *	=============================================================
  */
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if(!function_exists("proradio_custom_page_fields_settings")){
 function proradio_custom_page_fields_settings() {
 	$settings = array (

@@ -6,7 +6,10 @@
  * @subpackage proradio
  * @version 1.0.0
 */
-
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 $classes = array( 'proradio-post','proradio-post__mosaic','proradio-gradprimary proradio-negative' );
 $t_size = '';
 if( 1 == get_query_var( 'item_n' ) ){

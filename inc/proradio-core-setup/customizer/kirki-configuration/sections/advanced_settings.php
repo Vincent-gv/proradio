@@ -33,7 +33,7 @@ Kirki::add_field( 'proradio_config', array(
 	'settings'    => 'proradio_js_debug',
 	'label'       => esc_html__( 'Enable Javascript debug', "proradio" ),
 	'section'     => 'proradio_advanced_settings',
-	'description' => esc_html__( 'Display certain debug messages in frontend and fps performance', "proradio" ),
+	'description' => esc_html__( 'Display certain debug messages', "proradio" ),
 	'priority'    => 10,
 ));
 

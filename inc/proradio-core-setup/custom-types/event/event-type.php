@@ -4,7 +4,10 @@
  * @subpackage proradio
  * @version 1.0.0
  */
-
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if(!function_exists('event_register_type')){
 	add_action('init', 'event_register_type'); 
 	function event_register_type() {
@@ -181,6 +184,14 @@ if(!function_exists('event_register_type')){
 		);
 		if(class_exists("Custom_Add_Meta_Box")){
 			$event_meta_box = new Custom_Add_Meta_Box( 'event_customtab', esc_html__('Event details', "proradio"), $event_meta_boxfields, 'event', true );
+		}
+
+
+		/**
+		 * Custom header bg
+		 */
+		if(function_exists('proradio_customtype_bg')){
+			proradio_customtype_bg('event');
 		}
 
 

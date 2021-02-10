@@ -20,6 +20,8 @@
 
 .proradio-welcome__container { display: table; width: 100%; height: 100%; padding: 20px 30px 5px 10px; vertical-align: middle; }
 
+.proradio-welcome__container a { text-decoration: none; }
+
 .proradio-welcome__updater-debug { display: none; visibility: hidden; }
 
 .proradio-welcome__wrapper { background: #fff; display: table-cell; width: 100%; height: 100%; padding: 80px 30px; vertical-align: middle; border-radius: 8px; box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1); }
@@ -30,7 +32,7 @@
 
 .proradio-welcome__logo { text-align: center; transition-delay: 2.1s; }
 
-.proradio-welcome__logo img { max-width: 240px; height: auto; }
+.proradio-welcome__logo img { max-width: 120px; height: auto; }
 
 .proradio-welcome__title { margin: 1.7em 0 0.8em 0; text-align: center; transition-delay: 2.3s; }
 
@@ -85,4 +87,14 @@
 .proradio-welcome__info ul li { margin-left: 20px; list-style: square; padding: 5px 0; }
 
 .proradio-welcome__info:hover ul { max-height: 500px; }
+
+.proradio-welcome__search { padding: 16px 0; }
+
+.proradio-welcome__search input[type="text"] { width: 300px; }
+
+.proradio-welcome .proradio-kb a { text-decoration: none; font-size: 16px; padding-bottom: 16px; display: block; }
+
+.proradio-welcome .proradio-kb a i { color: #898989; font-size: 35px; display: inline-block; float: left; margin-right: 18px; }
+
+.proradio-welcome .proradio-kb a p { font-size: 13px; color: #999; margin: 0; }
 /*# sourceMappingURL=proradio-tgm-admin.css.map */

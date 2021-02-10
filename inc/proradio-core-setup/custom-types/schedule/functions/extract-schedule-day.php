@@ -5,6 +5,10 @@
  * Get week number for monthly schedule
  * ===================================================================
  */
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if(!function_exists('proradio_week_number')){
 	function proradio_week_number( $date = 'today' ) { 

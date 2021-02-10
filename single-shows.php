@@ -4,7 +4,9 @@
  * @subpackage proradio
  * @version 1.0.0
  */
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 get_header(); 
 ?>
 <div id="proradio-pagecontent" class="proradio-pagecontent proradio-single proradio-single--shows proradio-single__nosidebar">
@@ -29,7 +31,10 @@ get_header();
 		<div class="proradio-maincontent proradio-bg">
 			<?php
 			// Timetable
-			get_template_part( 'template-parts/single/show/part-single-show-table' ); 
+			// 2021 01 05 added option to hide
+			if('hide' !== get_post_meta($post->ID,'show_timetable',true)){
+				get_template_part( 'template-parts/single/show/part-single-show-table' ); 
+			}
 			?>
 			<div class="proradio-paper proradio-section">
 				<div class="proradio-entrycontents">
